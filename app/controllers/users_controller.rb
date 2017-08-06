@@ -1,8 +1,13 @@
-class UsersController < ActionController::Base
+class UsersController < ApplicationController
 
 	def new
 
 	end
+
+	def edit
+
+	end
+	
 
 end
 

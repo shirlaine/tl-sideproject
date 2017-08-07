@@ -7,6 +7,10 @@ class UsersController < ApplicationController
 	def edit
 
 	end
+
+	def support_us
+		
+	end
 	
 
 end

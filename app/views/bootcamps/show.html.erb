@@ -1,7 +1,12 @@
 <h1>Bootcamps#show</h1>
+  <p><%= flash[:notice] unless flash[:notice].blank? %></p>
+  <hr>
 
-  <p>
-  <%= @bootcamp.name %>
-  <%= @bootcamp.startdate %>
-  <%= @bootcamp.enddate %>
-  </p>
+  <p><%= @bootcamp.name %></p>
+  <p><strong>Start date: </strong><%= @bootcamp.startdate %></p>
+  <p><strong>End date: </strong><%= @bootcamp.enddate %></p>
+
+  <hr>
+  <p><%= link_to "Back to Index", bootcamps_path %></p>
+  <p><%= link_to "Edit", edit_bootcamp_path %></p>
+

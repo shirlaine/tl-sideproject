@@ -1,4 +1,4 @@
-<h1>Bootcamp#New</h1>
+<h1>Bootcamps#Edit</h1>
 
   <%= simple_form_for @bootcamp do |f| %>
     <%= f.input :name, placeholder: 'TL Bootcamp Batch #' %>
@@ -8,6 +8,3 @@
     <%= flash[:error] unless flash[:error].blank? %>
     <%= flash[:notice] unless flash[:notice].blank? %>
   <% end %>
-
-  <hr>
-<p><%= link_to "Back to Index", bootcamps_path %></p>

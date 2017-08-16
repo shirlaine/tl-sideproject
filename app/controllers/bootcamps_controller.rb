@@ -23,6 +23,22 @@ class BootcampsController < ApplicationController
     @bootcamp = Bootcamp.find(params[:id])
   end
 
+  def edit
+    @bootcamp = Bootcamp.find(params[:id])
+  end
+
+
+  def update
+    @bootcamp = Bootcamp.find(params[:id])
+    if @bootcamp.update(bootcamp_params)
+      flash[:notice]= "Your entry has been saved!"
+      redirect_to bootcamp_path
+      else
+    flash.now[:error] = "Your Data has not been updated, please check parameters"
+    render :edit
+    end
+  end
+
   private
 
   def bootcamp_params

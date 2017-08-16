@@ -10,13 +10,13 @@ class BootcampsController < ApplicationController
 
   def create
     @bootcamp = Bootcamp.new(bootcamp_params) #whitelisting certain params to be saved
-
     if @bootcamp.save
-      redirect_to_bootcamps_path
+      #redirect_to bootcamps_path
     else
       flash.now[:error]= "Your Data has not been saved, please check parameters"
       render :new
     end
+  end
 
   def show
     @bootcamp = Bootcamp.find(params[:id])
@@ -25,8 +25,8 @@ class BootcampsController < ApplicationController
   private
 
   def bootcamp_params
-    params[:bootcamp]
     #params is a hash, only permit these keys to be passed to the params hash
+    params[:bootcamp]
     params.require(:bootcamp).permit(:name, :startdate, :enddate, :description)
   end
 

@@ -11,7 +11,7 @@ class BootcampsController < ApplicationController
   def create
     @bootcamp = Bootcamp.new(bootcamp_params) #whitelisting certain params to be saved
     if @bootcamp.save
-      #redirect_to bootcamps_path
+      redirect_to bootcamps_path
     else
       flash.now[:error]= "Your Data has not been saved, please check parameters"
       render :new

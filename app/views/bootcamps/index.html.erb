@@ -1,0 +1,11 @@
+<h1>bootcamps#index</h1>
+
+<p>
+  <% @bootcamps.each do |bootcamp| %>
+  <%= bootcamp.name %>
+  <%= bootcamp.startdate %>
+  <%= bootcamp.enddate %>
+<% end %>
+
+<%= p params.inspect %>
+</p>

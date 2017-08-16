@@ -1,0 +1,10 @@
+
+<h1>Bootcamp#New</h1>
+
+<%= simple_form_for @bootcamp do |f| %>
+  <%= f.input :name, placeholder: 'TL Bootcamp Batch #' %>
+  <%= f.input :startdate, placeholder: 'user@domain.com' %>
+  <%= f.input :enddate, placeholder: 'user@domain.com' %>
+  <%= f.button :submit %>
+  <%= flash[:error] unless flash[:error].blank? %>
+<% end %>

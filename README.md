@@ -6,6 +6,10 @@
   - Bootcamp Model
   - Post Model Association with Comment Model
   - Posts view => index.show.html.erb & show.html.erb
+  - Bootcamp Model Validations
+  - Bootcamp Controller => Add CRU Actions
+  - Bootcamp View => Add Index, Show, New, Edit
+  - Flash errors and notices
 
 
 

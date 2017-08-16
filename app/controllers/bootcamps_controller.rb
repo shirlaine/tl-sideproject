@@ -11,6 +11,7 @@ class BootcampsController < ApplicationController
   def create
     @bootcamp = Bootcamp.new(bootcamp_params) #whitelisting certain params to be saved
     if @bootcamp.save
+      flash[:notice]= "Your entry has been saved!"
       redirect_to bootcamps_path
     else
       flash.now[:error]= "Your Data has not been saved, please check parameters"

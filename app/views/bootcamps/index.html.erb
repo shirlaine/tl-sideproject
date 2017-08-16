@@ -1,11 +1,9 @@
 <h1>bootcamps#index</h1>
-
-<p>
-  <% @bootcamps.each do |bootcamp| %>
-  <%= bootcamp.name %>
-  <%= bootcamp.startdate %>
-  <%= bootcamp.enddate %>
-<% end %>
-
-<%= p params.inspect %>
-</p>
+  <p><%= flash[:notice] unless flash[:notice].blank? %></p>
+  <p>
+    <% @bootcamps.each do |bootcamp| %>
+    <strong>Name: </strong><%= bootcamp.name %>
+    <p><strong>Start date: </strong><%= bootcamp.startdate %>
+    <strong>End date: </strong><%= bootcamp.enddate %></p>
+    <% end %>
+  </p>

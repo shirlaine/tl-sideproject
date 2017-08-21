@@ -9,9 +9,8 @@ class UsersController < ApplicationController
 	end
 
 	def support_us
-		
+
 	end
-	
+
 
 end
-

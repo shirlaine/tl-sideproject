@@ -7,7 +7,7 @@ class Bootcamp < ApplicationRecord
 
   def enddate_cannot_be_before_startdate
     if enddate<=startdate
-      errors.add(:enddate, "Has to be after startdate")
+      errors.add(:enddate, "Has to be after start date")
     end
   end
 

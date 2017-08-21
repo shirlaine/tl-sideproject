@@ -44,7 +44,7 @@ class BootcampsController < ApplicationController
   def bootcamp_params
     #params is a hash, only permit these keys to be passed to the params hash
     params[:bootcamp]
-    params.require(:bootcamp).permit(:name, :startdate, :enddate, :description)
+    params.require(:bootcamp).permit(:name, :startdate, :enddate, :description, :closingdate)
   end
 
 end

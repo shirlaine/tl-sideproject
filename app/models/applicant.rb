@@ -1,3 +1,3 @@
 class Applicant < ApplicationRecord
-  belongs_to :bootcamp
+  belongs_to :bootcamp, optional: true
 end

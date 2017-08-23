@@ -1,4 +1,6 @@
 class Bootcamp < ApplicationRecord
+  has_many :applicants
+
   validates :name, :startdate, :enddate, :closingdate, presence: true
 
   validate :enddate_cannot_be_before_startdate

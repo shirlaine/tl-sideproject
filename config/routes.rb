@@ -12,6 +12,9 @@ get '/posts', to:'posts#index'
 
 get '/posts/:id', to: 'posts#show'
 
+get '/applicants/error', to: 'applicants#error'
+
 resources :bootcamps
+resources :applicants, only: [:index, :new, :create]
 
 end

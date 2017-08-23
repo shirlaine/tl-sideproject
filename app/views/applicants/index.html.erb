@@ -1,0 +1,23 @@
+<h1>Applicants#index</h1>
+
+<hr>
+
+<h5>Date Today</h5><%= Time.now.strftime("%m/%d/%Y") %>
+
+<hr>
+
+<table>
+  <tr>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Closing Date</th>
+</tr>
+<% @applicants.each do |applicant| %>
+<tr>
+  <td><%= applicant.name %></td>
+  <td><%= applicant.email %></td>
+  <td><%= applicant.bootcamp.closingdate %></td>
+</tr>
+<% end %>
+
+</table>

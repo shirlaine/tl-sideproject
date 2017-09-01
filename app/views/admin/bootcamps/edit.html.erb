@@ -1,6 +1,6 @@
 <h1>Bootcamps#Edit</h1>
 
-  <%= simple_form_for @bootcamp do |f| %>
+  <%= simple_form_for [:admin, @bootcamp] do |f| %>
     <%= f.input :name, placeholder: 'TL Bootcamp Batch #' %>
     <%= f.input :startdate, placeholder: 'user@domain.com' %>
     <%= f.input :enddate, placeholder: 'user@domain.com' %>

@@ -3,7 +3,7 @@
   <hr>
 
     <% @bootcamps.each do |bootcamp| %>
-    <p><%= link_to bootcamp.name, bootcamp %></p>
+    <p><%= link_to bootcamp.name, admin_bootcamp_path(bootcamp) %></p>
 
     <p><strong>Start date: </strong><%= bootcamp.startdate %></p>
     <p><strong>End date: </strong><%= bootcamp.enddate %></p>

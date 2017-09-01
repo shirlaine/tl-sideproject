@@ -1,4 +1,4 @@
-class BootcampsController < ApplicationController
+class Admin::BootcampsController < ApplicationController
 
   def index
     @bootcamps = Bootcamp.all
@@ -12,7 +12,7 @@ class BootcampsController < ApplicationController
     @bootcamp = Bootcamp.new(bootcamp_params) #whitelisting certain params to be saved
     if @bootcamp.save
       flash[:notice]= "Your entry has been saved!"
-      redirect_to bootcamps_path
+      redirect_to admin_bootcamps_path
     else
       flash.now[:error]= "Your Data has not been saved, please check parameters"
       render :new
@@ -32,7 +32,7 @@ class BootcampsController < ApplicationController
     @bootcamp = Bootcamp.find(params[:id])
     if @bootcamp.update(bootcamp_params)
       flash[:notice]= "Your entry has been saved!"
-      redirect_to bootcamp_path
+      redirect_to admin_bootcamp_path
       else
     flash.now[:error] = "Your Data has not been updated, please check parameters"
     render :edit

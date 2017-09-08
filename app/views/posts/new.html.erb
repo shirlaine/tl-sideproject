@@ -1,7 +1,14 @@
 <h1> posts#new page </h1>
 
-<%= simple_form_for @post do |f| %>
-  <%= f.input :title %>
-  <%= f.input :body %>
+<%= simple_form_for @form, url:posts_path, method: :post do |f| %>
+
+  <%= f.simple_fields_for :post do |post| %>
+
+    <%= post.input :title %>
+    <%= post.input :body %>
+  <% end %>
+
   <%= f.submit %>
 <% end %>
+
+<%= link_to 'Back', posts_path %>

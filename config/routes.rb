@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+devise_for :admins
+
 root to: 'users#new'
 
  get '/users/new', to: 'users#new'

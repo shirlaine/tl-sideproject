@@ -14,6 +14,14 @@
     <br>
     <% end %>
 
+    <%= link_to "Sign Out", destroy_admin_session_path, method: :delete %>
+
+    <%= current_admin.inspect %>
+    <hr>
+    <%= current_admin %>
+    <hr>
+    <%= admin_session.inspect %>
+
 
 
 

@@ -1,4 +1,4 @@
-class Admin::BootcampsController < ApplicationController
+class Admin::BootcampsController < Admin::BaseController
 
   def index
     @bootcamps = Bootcamp.all

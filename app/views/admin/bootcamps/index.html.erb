@@ -1,7 +1,6 @@
 <h1>bootcamps#index</h1>
   <p><%= flash[:notice] unless flash[:notice].blank? %></p>
   <hr>
-
     <% @bootcamps.each do |bootcamp| %>
     <p><%= link_to bootcamp.name, admin_bootcamp_path(bootcamp) %></p>
 
@@ -9,10 +8,14 @@
     <p><strong>End date: </strong><%= bootcamp.enddate %></p>
     <p><strong>Description: </strong><%= bootcamp.description %></p>
     <p><strong>Application Closing date: </strong><%= bootcamp.closingdate %></p>
-
-
     <br>
     <% end %>
+
+    <%= current_admin.inspect %>
+    <hr>
+    <%= current_admin %>
+    <hr>
+    <%= admin_session.inspect %>
 
 
 

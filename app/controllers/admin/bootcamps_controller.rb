@@ -1,5 +1,5 @@
-class Admin::BootcampsController < ApplicationController
-  before_action :authenticate_admin!
+class Admin::BootcampsController < Admin::BaseController
+
   def index
     @bootcamps = Bootcamp.all
   end
